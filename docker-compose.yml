@@ -1,0 +1,27 @@
+services:
+  backend:
+    build:
+      context: ./server
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb://database:27017/multiTierApp
+    depends_on:
+      - database
+
+  frontend:
+    build:
+      context: ./client
+    ports:
+      - "3000:80"
+
+  database:
+    image: mongo:6
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
