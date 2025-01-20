@@ -37,20 +37,22 @@ This is a multi-tier application that consists of a backend API built with Node.
 ```bash
 git clone https://github.com/srtimsina/nodejs-multitier.git
 cd multi-tier-app
-
+```
 
 ### 2. Set Up Environment Variables
-Create a `.env` file in the `server directory and add the following:
+Create a `.env` file in the `server` directory and add the following:
 
 ```bash
 MONGO_URI=mongodb://database:27017/multiTierApp
 PORT=5000
+```
 
 ### 3. Build and Start Containers
 Run the following command to build and start the application:
 
 ```bash
 docker-compose up --build
+```
 
 ### 4. Access the Application
 - **Frontend**: http://localhost:3000
